@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: connectivator
-Version: 0.0.1
+Version: 0.0.2
 Summary: Simple wrapper functions for connecting to and loading data
 Home-page: https://github.com/jonathan-marsan/connectivator
 Author: Jonathan
@@ -11,7 +11,8 @@ Description: ## Connectivator
         
         ### Current State
         
-        * Connect to Postgres / Redshift
+        * Connect to Postgres / Redshift: `postgres.get_engine`
+        * Write output of SQL files to CSV: `transfer.sqls_to_csv`
         
         ### Environment Variables
         

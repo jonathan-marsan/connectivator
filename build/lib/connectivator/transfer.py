@@ -35,7 +35,7 @@ def read_sql_file(filepath, connection):
     print('Read ' + filepath)
     # connection
     data_frame = pd.read_sql_query(opened_query.read(), connection)
-    print('Stored output of ' + filepath + ' into data frame')
+    print('Stored ' + filepath + ' into data frame')
     return data_frame
 
 

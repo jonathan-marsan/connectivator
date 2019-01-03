@@ -2,6 +2,7 @@ README.md
 setup.py
 connectivator/__init__.py
 connectivator/postgres.py
+connectivator/transfer.py
 connectivator.egg-info/PKG-INFO
 connectivator.egg-info/SOURCES.txt
 connectivator.egg-info/dependency_links.txt

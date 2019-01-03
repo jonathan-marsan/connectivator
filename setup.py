@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="connectivator",
-    version="0.0.1",
+    version="0.0.2",
     author="Jonathan",
     description="Simple wrapper functions for connecting to and loading data",
     long_description=long_description,

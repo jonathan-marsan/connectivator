@@ -4,7 +4,8 @@ Simple wrapper functions for connecting to and loading data.
 
 ### Current State
 
-* Connect to Postgres / Redshift
+* Connect to Postgres / Redshift: `postgres.get_engine`
+* Write output of SQL files to CSV: `transfer.sqls_to_csv`
 
 ### Environment Variables
 

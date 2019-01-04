@@ -1,6 +1,8 @@
 # folders
 venv/
+__pycaches__/
 
 # files
 client_secret.json
 .DS_Store
+*.pyc

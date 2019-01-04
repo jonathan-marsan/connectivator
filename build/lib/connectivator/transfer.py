@@ -25,7 +25,7 @@ def make_dir(filepath):
         os.makedirs(file_dir)
 
 
-def read_sql_file(filepath, connection):
+def read_sql_data(filepath, connection):
     """
     Load output of sql file into  a data frame
     """
@@ -35,7 +35,7 @@ def read_sql_file(filepath, connection):
     print('Read ' + filepath)
     # connection
     data_frame = pd.read_sql_query(opened_query.read(), connection)
-    print('Stored ' + filepath + ' into data frame')
+    print('Stored output of ' + filepath + ' into data frame')
     return data_frame
 
 
@@ -43,7 +43,7 @@ def sql_to_csv(filepath, connection, output_folder='output/'):
     """
     Writes output of a single sql query to CSV
     """
-    data_frame = read_sql_file(filepath, connection)
+    data_frame = read_sql_data(filepath, connection)
     # add slash if needed
     output_folder = add_slash(dir_name=output_folder)
     output_filepath = output_folder + filepath.split('.')[0] + '.csv'

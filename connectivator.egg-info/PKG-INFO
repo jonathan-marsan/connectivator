@@ -7,12 +7,15 @@ Author: Jonathan
 License: UNKNOWN
 Description: ## Connectivator
         
-        Simple wrapper functions for connecting to and loading data.
+        Set of wrapper functions for reading data from a Redshift/postgres database and writing contents to a CSV or Google sheet.
         
         ### Current State
         
         * Connect to Postgres / Redshift: `postgres.get_engine`
+        * Read output of a sql query into a data frame: `transfer.read_sql_data`
         * Write output of SQL files to CSV: `transfer.sqls_to_csv`
+        * Read contents of a Google sheet into a data frame: `gsheets.get_ws_data`
+        * Update contents of a Google sheet using a data frame: `gsheets.update_ws`
         
         ### Environment Variables
         

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: connectivator
-Version: 0.0.3
+Version: 0.0.4
 Summary: Simple wrapper functions for connecting to and loading data
 Home-page: https://github.com/jonathan-marsan/connectivator
 Author: Jonathan

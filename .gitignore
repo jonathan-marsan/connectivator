@@ -3,3 +3,4 @@ venv/
 
 # files
 client_secret.json
+.DS_Store

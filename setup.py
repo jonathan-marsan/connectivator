@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="connectivator",
-    version="0.0.4",
+    version="0.0.5",
     author="Jonathan",
     description="Simple wrapper functions for connecting to and loading data",
     long_description=long_description,
@@ -18,6 +18,7 @@ setuptools.setup(
           'psycopg2',
           'gspread',
           'gspread-dataframe',
+          'oauth2client',
       ],
     classifiers=[
         "Programming Language :: Python :: 3",

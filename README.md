@@ -1,6 +1,6 @@
 ## Connectivator
 
-Set of wrapper functions to abstract repetitive tasks such as reading data from a Redshift/postgres databases, and writing their contents to a CSV or Google sheet. A single method is used to simplify and standardize importing/exporting. For more flexibility, simply use the original packages these wrapper functions were built upon, i.e. pandas, gspread, etc.
+Set of wrapper functions to abstract repetitive tasks such as reading data from a Redshift/postgres databases, and writing their contents to a CSV or Google sheet. The lack of flexibility is done on purpose to simplify and standardize importing/exporting procedures. For more flexibility, simply use the original packages these wrapper functions were built upon, i.e. pandas, gspread, etc.
 
 ### Current State
 

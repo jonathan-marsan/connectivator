@@ -2,6 +2,8 @@
 Setup Google Sheet Connection
 """
 
+import os
+
 import pandas as pd
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
@@ -9,9 +11,10 @@ from gspread_dataframe import set_with_dataframe
 
 
 def get_gs_con():
+    creds_path = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
     scope = ['https://spreadsheets.google.com/feeds',
              'https://www.googleapis.com/auth/drive']
-    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name(creds_path, scope)
     return gspread.authorize(creds)
 
 

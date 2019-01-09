@@ -72,7 +72,7 @@ def sqls_to_csv(filepath, db_conn, output_folder='output/'):
                    output_folder=output_folder)
 
 
-def sql_to_gs(filepath, db_conn, gs_con, output_gs, output_ws=None):
+def sql_to_gs(filepath, db_conn, gs_conn, output_gs_id, output_ws=None):
     """
     Writes output of a single sql query to a google sheet
     """
@@ -80,11 +80,12 @@ def sql_to_gs(filepath, db_conn, gs_con, output_gs, output_ws=None):
         output_ws = filepath.split('/')[-1].split('.')[0]
     data_frame = read_sql_data(filepath, db_conn)
     # add slash if needed
-    gsheets.update_ws(gs_con, output_gs, output_ws, data_frame)
-    print('Wrote output to Google sheet id ' + output_ws)
+    gsheets.update_ws(gs_conn, output_gs_id, output_ws, data_frame)
+    print('Wrote output to Google sheet id ' + output_gs_id +
+          ', worksheet ' + output_ws)
 
 
-def sqls_to_gs(filepath, db_conn, gs_con, output_gs):
+def sqls_to_gs(filepath, db_conn, gs_conn, output_gs_id):
     """
     Writes output of sql queries to a google sheet
     """
@@ -95,7 +96,7 @@ def sqls_to_gs(filepath, db_conn, gs_con, output_gs):
             if file.endswith(".sql"):
                 file = filepath + file
                 sql_to_gs(filepath=file, db_conn=db_conn,
-                          gs_con=gs_con, output_gs=output_gs)
+                          gs_conn=gs_conn, output_gs_id=output_gs_id)
     else:
         sql_to_gs(filepath=filepath, db_conn=db_conn,
-                  gs_con=gs_con, output_gs=output_gs)
+                  gs_conn=gs_conn, output_gs_id=output_gs_id)

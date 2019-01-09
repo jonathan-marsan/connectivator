@@ -1,6 +1,6 @@
 ## Connectivator
 
-Set of wrapper functions to abstract repetitive tasks such as reading data from a Redshift/postgres databases, and writing their contents to a CSV or Google sheet.
+Set of wrapper functions to abstract repetitive tasks such as reading data from a Redshift/postgres databases, and writing their contents to a CSV or Google sheet. A single method is used to simplify and standardize importing/exporting. For more flexibility, simply use the original packages these wrapper functions were built upon, i.e. pandas, gspread, etc.
 
 ### Current State
 
@@ -16,7 +16,7 @@ Set of wrapper functions to abstract repetitive tasks such as reading data from 
 * Add a `.env` file to the project root directory.
 * Add the following environment variables, replacing with values relevant for your connections. Format:
 
-**Postgres/Redshift Connection**
+**Postgres/Redshift Environment Variables**
 
 ```
 export PGHOST = instance-name.abc123.us-east-1.redshift.amazonaws.com
@@ -27,6 +27,12 @@ export PGPASSWORD = your_password
 
 * Load the environment variables before running the script. For example, by running `source .env` in the terminal you are using to run Python scripts.
 
-**Google Sheets**
+**Google Sheets Credient File and Environment Variable**
 
-Requires `client_secret.json` credentials file in root directory. These are downloaded when creating a service account within a project that has been created through the Google developer console and has the Google Sheet API enabled . See: https://developers.google.com/sheets/api/quickstart/python
+Requires a json credentials file, which can be downloaded when creating a service account within a Google developer console project. The Google Sheets API enabled also must be enabled. See: https://developers.google.com/sheets/api/quickstart/python
+
+Also, the google sheet to be modified needs to give access to the Service Account. To do so, find the email associated to the service account under Credentials >> Manage Service Accounts of the Google Console project. Then go to the google sheet to be modified and allow edit access to this email.
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="filepath/to.json"
+```

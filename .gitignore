@@ -6,3 +6,4 @@ __pycaches__/
 client_secret.json
 .DS_Store
 *.pyc
+.env
